@@ -1,11 +1,4 @@
 import React, { Component } from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    NavLink
-} from "react-router-dom";
 import SelectedFilm from './SelectedFilm';
 
 export default class SingleFilme extends Component {
@@ -37,11 +30,7 @@ export default class SingleFilme extends Component {
                     <div className="content-box" style={boxStyle}>
 
                         <h5 className="name" onClick={() => this.setState({ selected: true })}>
-
-                            {/* <Link to="/selected"> */}
                             {this.props.singleMovie.original_title || this.props.singleMovie.name}
-                            {/* </Link> */}
-
                         </h5>
 
                         <h6>popularity :{this.props.singleMovie.popularity}</h6>
