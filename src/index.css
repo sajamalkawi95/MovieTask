@@ -1,7 +1,224 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+#root{
+  background-color: #121212;
+
+}
+.SearchInput {
+  width: 150px;
+  box-sizing: border-box;
+  border: 3px solid #F05454;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  transition: width 0.4s ease-in-out;
+
+}
+.SearchInput:focus {
+  width: 30%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(240, 84, 84, 0.7);
+  border-radius: 8px;
+
+}
+/* //////////////// header ////////// */
+header , footer{
+  width: 100%;
+  height: 110px;
+  background-color: #F05454;
+  font-family: 'Pacifico', cursive;
+}
+header h1 , footer h4{
+color: #121212;
+padding: 20px;
+font-family: 'Pacifico', cursive;
+}
+/* //////////////// main ////////// */
+.main{
+  background-color: #121212;
+  padding: 20px;
+  height: auto;
+}
+/* ///////////////// card movie ////////////////////// */
+.container {
+  height: 350px;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 20px;
+}
+.container img{
+  z-index: 1;
+  width: 100%;
+  padding: 10px;
+}
+.content-box {
+  position: relative;
+  visibility: hidden;
+  height: 350px;
+  overflow: auto;
+  width: 230px;
+  top:-300px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px 10px 15px 15px;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+.content-box p {
+  color: #252424;
+  font: 13px sans-serif bold;
+}
+.content-box h5:hover{
+cursor: pointer;
+}
+.content-box h5{
+  margin: 5px;
+  background: rgba(240, 84, 84 , 0.5);
+}
+
+.btn {
+  width: 248px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px 0 0;
+}
+
+.btn a {
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background-color: #f9b02d;
+  border-radius: 7px;
+}
+
+/* ////// selectedFilm ///// */
+.selectedFilm{
+position: absolute;
+right: 0%;
+width: 100%;
+height: 100%;
+background-color: #F05454;
+opacity: 0.9;
+}
+/* ///////////  single page ///////////// */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: left;
+  align-items: center;
+}
+
+.card {
+  min-height: 80vh;
+  box-shadow: 0px 10px 10px #F05454, 0px 0px 10px #F05454;
+  padding:12rem;
+  transform-style: preserve-3d;
+}
+
+.sneaker {
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sneaker img {
+  width: 13rem;
+  z-index: 2;
+}
+
+.info h1 {
+  font-size: 1.7rem;
+  transition: all 0.75s ease-out;
+}
+
+.info h3 {
+  font-size: 1rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizes button {
+  padding: 0.5rem 2rem;
+  background: white;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  color: #585858;
+}
+.release_date {
+  position: relative;
+  left: 50%;
+}
+button.active {
+  color: white;
+  background-color: #585858;
+}
+
+.purchase {
+  margin-top: 3rem;
+  transition: all 0.75s ease-out;
+}
+
+.purchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+  font-family: inherit;
+}
+
+@media screen and (min-width: 740px) {
+  .card {
+    width: 35rem;
+    padding: 0rem 5rem;
+  }
+
+  .sneaker img {
+    width: 20rem;
+  }
+
+  .circle {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .info h1 {
+    font-size: 3rem;
+  }
+
+  .info h3 {
+    font-size: 1.3rem;
+  }
 }
